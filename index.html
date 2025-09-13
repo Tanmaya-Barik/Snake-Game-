@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-800 flex items-center justify-center h-screen overflow-hidden">
+
+    <div class="game-container max-w-lg w-full p-4">
+        <!-- Header -->
+        <div class="w-full flex justify-between items-center mb-4 text-3xl">
+             <div class="flex items-center gap-4">
+                <h1 class="text-gray-700 hidden sm:block">SNAKE</h1>
+                <button id="pauseButton" class="control-button bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-bold p-2 rounded-lg text-2xl w-12 h-12 flex items-center justify-center">❚❚</button>
+            </div>
+            <div class="info-panel px-4 py-1 rounded-lg">
+                <span>SCORE: </span><span id="score">0</span>
+            </div>
+        </div>
+
+        <!-- Game Canvas -->
+        <div class="canvas-container">
+            <canvas id="gameCanvas"></canvas>
+            <div id="gameOverlay" class="game-overlay">
+                <h2 id="overlayTitle" class="text-6xl mb-4">Ready?</h2>
+                <p id="overlayText" class="text-2xl mb-6">Use Arrow Keys or Buttons to Play</p>
+                <button id="startButton" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-3xl shadow-lg">Start Game</button>
+                <button id="resumeButton" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-3xl shadow-lg hidden">Resume</button>
+            </div>
+        </div>
+        
+        <!-- On-Screen Controls -->
+        <div class="grid grid-cols-3 gap-2 mt-4 w-48 md:w-64">
+            <div></div>
+            <button id="btn-up" class="control-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-4 rounded-lg">▲</button>
+            <div></div>
+            <button id="btn-left" class="control-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-4 rounded-lg">◀</button>
+            <button id="btn-down" class="control-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-4 rounded-lg">▼</button>
+            <button id="btn-right" class="control-button bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-4 rounded-lg">▶</button>
+        </div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
